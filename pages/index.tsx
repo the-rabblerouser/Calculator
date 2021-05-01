@@ -1,10 +1,16 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
+import Button from '../components/Button';
+
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
 	const [displayValue, setDisplayValue] = useState<number>(0);
+
+	const onClick = (value): void => {
+		setDisplayValue(value);
+	};
 
 	return (
 		<div className={styles.container}>
@@ -16,20 +22,23 @@ export default function Home() {
 			<div className={styles.container}>
 				<div className={styles.displayValue}>{displayValue}</div>
 				<div className={styles.calcContainer}>
-					<button className={styles.calcButton}>7</button>
-					<button className={styles.calcButton}>8</button>
-					<button className={styles.calcButton}>9</button>
-					<button className={styles.calcButton}>x</button>
-					<button className={styles.calcButton}>4</button>
-					<button className={styles.calcButton}>5</button>
-					<button className={styles.calcButton}>6</button>
-					<button className={styles.calcButton}>-</button>
-					<button className={styles.calcButton}>1</button>
-					<button className={styles.calcButton}>2</button>
-					<button className={styles.calcButton}>3</button>
-					<button className={styles.calcButton}>+</button>
-					<button className={styles.calcButton}>0</button>
-					<button className={styles.calcButton}>=</button>
+					<Button onClick={onClick}>7</Button>
+					<Button onClick={onClick}>8</Button>
+					<Button onClick={onClick}>9</Button>
+					<Button onClick={onClick}>x</Button>
+					<Button onClick={onClick}>4</Button>
+					<Button onClick={onClick}>5</Button>
+					<Button onClick={onClick}>6</Button>
+					<Button onClick={onClick}>-</Button>
+					<Button onClick={onClick}>1</Button>
+					<Button onClick={onClick}>2</Button>
+					<Button onClick={onClick}>3</Button>
+					<Button onClick={onClick}>+</Button>
+				</div>
+				<div className={styles.zeroEqual}>
+					<Button onClick={onClick}>C</Button>
+					<Button onClick={onClick}>0</Button>
+					<Button onClick={onClick}>=</Button>
 				</div>
 			</div>
 		</div>

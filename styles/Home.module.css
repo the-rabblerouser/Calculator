@@ -11,7 +11,7 @@
 .displayValue {
 	width: 15rem;
 	height: 4.5rem;
-	padding: 0.2rem;
+	padding: 1rem;
 	background-color: #202020;
 	color: #fff;
 	font-size: 3.75rem;
@@ -25,6 +25,14 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.zeroEqual {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	margin-top: -3rem;
 }
 
 .calcButton {
@@ -67,6 +75,14 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr 1fr;
+	}
+
+	.zeroEqual {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		margin-top: -4rem;
 	}
 
 	.calcButton {
