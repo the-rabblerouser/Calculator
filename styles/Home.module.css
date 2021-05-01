@@ -15,9 +15,6 @@
 	background-color: #202020;
 	color: #fff;
 	font-size: 3.75rem;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
 }
 
 .calcContainer {
@@ -26,11 +23,18 @@
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr;
 }
+.clearDot {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	margin-top: 0rem;
+}
 
 .zeroEqual {
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
 	margin-top: -3rem;
 }
