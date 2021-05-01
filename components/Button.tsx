@@ -2,11 +2,18 @@ import React from 'react';
 
 import styles from '../styles/Home.module.css';
 
-const Button = ({ onClick, children }) => {
+interface Button {
+	children: React.ReactNode;
+	onClick: (children: React.ReactNode) => void;
+}
+
+const Button = ({ onClick, children }: Button) => {
 	return (
-		<div className={styles.calcButton} onClick={(): void => onClick(children)}>
+		<button
+			className={styles.calcButton}
+			onClick={(): void => onClick(children)}>
 			{children}
-		</div>
+		</button>
 	);
 };
 

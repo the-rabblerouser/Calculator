@@ -8,8 +8,8 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
 	const [displayValue, setDisplayValue] = useState<number>(0);
 
-	const onClick = (value): void => {
-		setDisplayValue(value);
+	const onClick = (value: number) => {
+		setDisplayValue(displayValue + value);
 	};
 
 	return (
