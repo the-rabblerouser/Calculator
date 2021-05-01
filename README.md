@@ -5,7 +5,7 @@
 
 This is a calculator app, built with **Typescript, React, & Next.js**.
 
-[Checkout it out!]()
+[Checkout it out!](https://calculator-seven-pi.vercel.app/)
 
 
 ## Screenshots
