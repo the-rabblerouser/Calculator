@@ -1,15 +1,21 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
+import * as math from 'mathjs';
+
 import Button from '../components/Button';
 
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
-	const [displayValue, setDisplayValue] = useState<number>(0);
+	const [displayValue, setDisplayValue] = useState<string>('');
 
-	const onClick = (value: number) => {
+	const onClick = (value: string) => {
 		setDisplayValue(displayValue + value);
+	};
+
+	const evaluate = (): void => {
+		setDisplayValue(math.evaluate(displayValue));
 	};
 
 	return (
@@ -38,7 +44,7 @@ export default function Home() {
 				<div className={styles.zeroEqual}>
 					<Button onClick={onClick}>C</Button>
 					<Button onClick={onClick}>0</Button>
-					<Button onClick={onClick}>=</Button>
+					<Button onClick={evaluate}>=</Button>
 				</div>
 			</div>
 		</div>
